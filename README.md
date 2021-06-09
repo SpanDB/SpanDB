@@ -165,9 +165,13 @@ ulimit -n 100000
 Note: The TopFS also has a cache. Please make sure the hugepages size is bigger than the cache size.
 
 
+## 3. Migrate RocksDB database to SpanDB
 
-## 3. Papers
+It's straightforward to migrate the existing RocksDB database to SpanDB by specifying a "fast device". When opening a current RocksDB database with SpanDB, it will automatically migrate the top-level data (as much as possible) to the "fast device".
 
-Hao Chen, Chaoyi Ruan, Cheng Li, Xiaosong Ma, Yinlong Xu. *SpanDB: A Fast, Cost-Effective LSM-tree Based KV Store on Hybrid Storage*. In Proceedings of FAST'21: 19th USENIX Conference on File and Storage Technologies (FAST'2021).
+
+## 4. Papers
+
+Hao Chen, Chaoyi Ruan, Cheng Li, Xiaosong Ma, Yinlong Xu. *SpanDB: A Fast, Cost-Effective LSM-tree Based KV Store on Hybrid Storage*. In Proceedings of FAST'21: 19th USENIX Conference on File and Storage Technologies (FAST'2021). [[Paper](https://www.usenix.org/conference/fast21/presentation/chen-hao)]
 
 
