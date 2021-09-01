@@ -142,7 +142,7 @@ The `test` needs 7 parameters, `<workload_file> <client_num> <data_dir> <log_dir
 **Generate DB**
 
 ```
-./test $WORKLOAD_PATH 40 $DATA_PATA $LOG_PATA 1 rocksdb $BASE_DB_PATH
+./test $WORKLOAD_PATH 40 $DATA_PATH $LOG_PATH 1 rocksdb $BASE_DB_PATH
 ```
 
 **Test**
@@ -151,7 +151,7 @@ The `test` needs 7 parameters, `<workload_file> <client_num> <data_dir> <log_dir
 RocksDB:
 
 ```
-./test $WORKLOAD_PATH 40 $DATA_PATA $LOG_PATA 0 rocksdb $BASE_DB_PATH
+./test $WORKLOAD_PATH 40 $DATA_PATH $LOG_PATH 0 rocksdb $BASE_DB_PATH
 ```
 
 SpanDB:
@@ -159,7 +159,7 @@ SpanDB:
 ```
 sudo su root
 ulimit -n 100000
-./test $WORKLOAD_PATH 8 $DATA_PATA $LOG_PATA $PCIE_ADDR 0 spandb $BASE_DB_PATH
+./test $WORKLOAD_PATH 8 $DATA_PATA $PCIE_ADDR 0 spandb $BASE_DB_PATH
 ```
 
 Note: The TopFS also has a cache. Please make sure the hugepages size is bigger than the cache size.
