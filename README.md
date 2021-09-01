@@ -159,7 +159,7 @@ SpanDB:
 ```
 sudo su root
 ulimit -n 100000
-./test $WORKLOAD_PATH 8 $DATA_PATA $PCIE_ADDR 0 spandb $BASE_DB_PATH
+./test $WORKLOAD_PATH 8 $DATA_PATH $PCIE_ADDR 0 spandb $BASE_DB_PATH
 ```
 
 Note: The TopFS also has a cache. Please make sure the hugepages size is bigger than the cache size.
