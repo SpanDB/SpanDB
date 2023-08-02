@@ -843,7 +843,7 @@ if(NOT DEFINED ENV{DPDK_INCLUDE})
 endif()
 target_include_directories(${ROCKSDB_SHARED_LIB} PRIVATE $ENV{DPDK_INCLUDE})
 target_link_libraries(${ROCKSDB_SHARED_LIB}  ${SPDK_LIBS} ${DPDK_LIBS})
-target_link_libraries(${ROCKSDB_SHARED_LIB} dl numa isal)
+target_link_libraries(${ROCKSDB_SHARED_LIB} dl numa)
 target_link_libraries(${ROCKSDB_SHARED_LIB} tbb)
 
 
